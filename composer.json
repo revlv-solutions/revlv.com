@@ -6,6 +6,9 @@
     "repositories": [{
         "url": "git@gitlab.revlv.net:laboratory/scribe.git",
         "type": "git"
+    }, {
+        "url": "git@gitlab.revlv.net:laboratory/selection.git",
+        "type": "git"
     }],
     "require": {
         "php": "^7.2.5",
@@ -13,6 +16,7 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
+        "laboratory/selection": "~0.1",
         "laboratory/scribe": "dev-master",
         "laravel/tinker": "^2.0",
         "spatie/laravel-sitemap": "^5.7"
@@ -37,7 +41,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "Revlv\\": "app/"
         },
         "classmap": [
             "database/seeds",

@@ -166,15 +166,16 @@ return [
          * Package Service Providers...
          */
         Laboratory\Scribe\ScribeServiceProvider::class,
+        Laboratory\Selection\SelectionServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Revlv\Providers\AppServiceProvider::class,
+        Revlv\Providers\AuthServiceProvider::class,
+        // Revlv\Providers\BroadcastServiceProvider::class,
+        Revlv\Providers\EventServiceProvider::class,
+        Revlv\Providers\RouteServiceProvider::class,
 
     ],
 
@@ -221,6 +222,8 @@ return [
         'Response' => Illuminate\Support\Facades\Response::class,
         'Route' => Illuminate\Support\Facades\Route::class,
         'Schema' => Illuminate\Support\Facades\Schema::class,
+        'Scribe' => Laboratory\Scribe\Facades\Scribe::class,
+        'Selection' => Laboratory\Selection\Facades\Selection::class,
         'Session' => Illuminate\Support\Facades\Session::class,
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'Str' => Illuminate\Support\Str::class,

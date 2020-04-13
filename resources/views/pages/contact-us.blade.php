@@ -39,45 +39,23 @@
       </div>
       <div class="content__block__right">
         <div class="content__panel">
-          <form action="" class="form">
+          {{ Form::open() }}
             <div class="alert">
               <p>Dicta minima, quos, consequatur eligendi accusantium</p>
-              </div>
-            <div class="form-group">
-              <label for="" class="label">Full Name</label>
-              <input type="text" class="input" placeholder="John Doe">
             </div>
+            {{ Scribe::txt('name', 'Full Name', true) }}
+            {{ Scribe::txt('company', 'Company', true) }}
+            {{ Scribe::txt('email', 'Email', true) }}
+            {{ Scribe::txt('contact_number', 'Contact No.', true) }}
+            {{ Scribe::sel('inquiry', 'Inquiry', 'InquiryTypes', 'Select Inquiry', true) }}
+            {{ Scribe::txtarea('message', 'Message', true) }}
+
             <div class="form-group">
-              <label for="" class="label">Company</label>
-              <input type="text" class="input" placeholder="Microsoft">
+              <button
+                type="submit"
+                class="button">Submit Inquiry</button>
             </div>
-            <div class="form-group">
-              <label for="" class="label">Email</label>
-              <input type="text" class="input" placeholder="johndoe@email.com">
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Contact No.</label>
-              <input type="text" class="input" placeholder="0915-XXXX-XXX">
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Inquiry</label>
-              <div class="select">
-                <select name="" id="">
-                  <option>Request for a quote</option>
-                  <option>Product inquiry</option>
-                  <option>Solutions and other services</option>
-                  <option>Company tie-up or business partnership</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="label">Message</label>
-              <textarea name="" id="" cols="30" rows="5" class="textarea"></textarea>
-            </div>
-            <div class="form-group">
-              <button class="button">Submit Inquiry</button>
-            </div>
-          </form>
+          {{ Form::close() }}
         </div>
       </div>
     </div>

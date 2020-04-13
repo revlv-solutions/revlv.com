@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e06ce1c76d2ac429528b2211ac39365a",
+    "content-hash": "190ed0cd67ad5cbd4a432ffcf306e165",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -795,6 +795,41 @@
                 }
             ],
             "time": "2019-10-07T01:21:35+00:00"
+        },
+        {
+            "name": "laboratory/selection",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.revlv.net:laboratory/selection.git",
+                "reference": "63cc03caaa97cde05f254684304fe69e17ec5981"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laboratory\\Selection\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Darick Pascua",
+                    "email": "rdpascua@outlook.com"
+                }
+            ],
+            "time": "2019-04-08T07:00:16+00:00"
         },
         {
             "name": "laravel/framework",

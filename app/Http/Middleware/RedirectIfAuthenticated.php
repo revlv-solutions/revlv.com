@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Revlv\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Revlv\Providers\RouteServiceProvider;
 
 class RedirectIfAuthenticated
 {
