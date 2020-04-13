@@ -42,9 +42,9 @@
       <div class="content__block__right">
         <div class="content__panel">
           <form action="" class="form">
-            <!-- <div class="alert">
+            <div class="alert">
               <p>Dicta minima, quos, consequatur eligendi accusantium</p>
-              </div> -->
+              </div>
             <div class="form-group">
               <label for="" class="label">Full Name</label>
               <input type="text" class="input" placeholder="John Doe">
