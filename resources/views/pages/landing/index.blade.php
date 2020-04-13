@@ -109,7 +109,7 @@
             <li>Supporting your mission through state-of-the-art computing, network & security solutions</li>
             <li>Linking your stakeholders through reliable and cost effective broadband, satellite, radio internet and communications systems</li>
           </ul>
-          <a href="profile.html" class="section__button">Full Profile</a>
+          <a href="/profile" class="section__button">Full Profile</a>
         </div>
         <div class="section__content__right">
           <div class="section__content__right__image">

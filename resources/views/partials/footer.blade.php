@@ -44,16 +44,16 @@
           <span class="footer__menu__title">Products</span>
         </li>
         <li class="footer__menu__item">
-          <a href="/rsinet" target="_blank" class="footer__menu__link">RSInet™</a>
+          <a href="/products/rsinet" target="_blank" class="footer__menu__link">RSInet™</a>
         </li>
         <li class="footer__menu__item">
-          <a href="/sentry" target="_blank" class="footer__menu__link">Sentry™</a>
+          <a href="/products/sentry" target="_blank" class="footer__menu__link">Sentry™</a>
         </li>
         <li class="footer__menu__item">
-          <a href="/sentinel" target="_blank" class="footer__menu__link">Sentinel™</a>
+          <a href="/products/sentinel" target="_blank" class="footer__menu__link">Sentinel™</a>
         </li>
         <li class="footer__menu__item">
-          <a href="/tender" target="_blank" class="footer__menu__link">Tender™</a>
+          <a href="/products/tender" target="_blank" class="footer__menu__link">Tender™</a>
         </li>
         <li class="footer__menu__item">
           <a href="https://fcovid.ph/" target="_blank" class="footer__menu__link">FCovid™</a>
