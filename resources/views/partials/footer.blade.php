@@ -1,5 +1,3 @@
-
-
 <div class="footer">
   <div class="footer__wrapper">
     <div class="footer__top">
@@ -63,7 +61,7 @@
           <span class="footer__menu__title">Legal</span>
         </li>
         <li class="footer__menu__item">
-          <a href="privacy-policy.html" class="footer__menu__link">Privacy Policy</a>
+          <a href="/privacy-policy" class="footer__menu__link">Privacy Policy</a>
         </li>
       </ul>
       <ul class="footer__menu">

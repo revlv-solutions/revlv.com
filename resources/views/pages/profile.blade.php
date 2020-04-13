@@ -14,7 +14,7 @@
           <p>Since 2014, we have helped our clients become enabled through technology in more than 100 projects around the country resulting to more efficient delivery of goods and services and increased efficiency on how these clients pursue their mission.</p>
           <p>Differentiated by the quality of our people and our passionate drive to deliver the best technology, we align our solutions to our customers’ objectives to deliver a lasting impact to our clients’ end users and constituents.   </p>
           <p>We serve Software; Network & Computing; Communications; Managed IT & Security; and Engineering Turnkey Solutions to our clients.  Our services span from multi-year IT planning for our clients, assisting clients shepherd projects for approval, delivery of these projects, providing the post-delivery support to ensure that the solutions are up-to-date.</p>
-          <p>Core to Bechtel are our values – ethics, safety, quality, people, culture, relationships, innovation and sustainability, and our covenants – integrity, respect, collaboration, trust, and delivery. They are what we believe, what customers can expect, and how we deliver. </p>
+          <p>Core to our people are  our values – ethics, safety, quality, people, culture, relationships, innovation and sustainability, and our covenants – integrity, respect, collaboration, trust, and delivery. They are what we believe, what customers can expect, and how we deliver.</p>
         </div>
         <div class="content__panel">
           <h3>Reliability, Integrity and Creativity</h3>

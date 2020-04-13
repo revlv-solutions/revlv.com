@@ -1,67 +1,67 @@
 /*
-solutions.less
+solutions
 ------------------------------------------------------------------------- */
 
 
 .solutions {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__item {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row nowrap;
+    flex-shrink: 1;
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 100%;
+    border: solid 1px darken(@primary-background, 10%);
 
-    &__item {
-        flex-shrink: 1;
-        margin-right: 50px;
+    > * {
+      margin: 0 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin-right: 20px;
+    border-radius: 50%;
+    font-size: @base-font-size + 12;
+    color: @primary-color;
+    border: solid 2px darken(@white, 20%);
+  }
+
+  &__details {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+
+    > * {
+      margin: 5px 0;
+
+      &:first-child {
         margin-top: 0;
-        padding: 30px;
-        .calc(width, ~'(100%  - 50px) / 2');
-        border: solid 1px darken(@primary-background, 10%);
+      }
 
-        > * {
-          margin: 15px 0;
-
-          &:first-child {
-            margin-top: 0;
-          }
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
-
-        &:nth-child(n+3) {
-            margin-top: 50px;
-        }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-
-    &__icon,
-    &__name,
-    &__info {
-        display: block;
-        font-size: @base-font-size;
-        font-weight: 300;
-        color: @font-color-light;
-    }
-
-    &__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        font-size: @base-font-size + 10;
-        // color: @primary-color;
-        background: @primary-color;
-        color: @white;
-        // border: solid 1px darken(@primary-background, 20%);
-    }
-
-    &__name {
-        font-weight: 500;
-        line-height: 1.4;
-        color: @font-color;
-    }
+  }
 }

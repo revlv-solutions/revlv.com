@@ -7,3 +7,4 @@ Route::view('products', 'pages.products');
 Route::view('clients', 'pages.clients');
 Route::view('careers', 'pages.careers');
 Route::view('contact-us', 'pages.contact-us');
+Route::view('privacy-policy', 'pages.privacy-policy');
