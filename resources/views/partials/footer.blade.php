@@ -20,25 +20,25 @@
           <span class="footer__menu__title">Company</span>
         </li>
         <li class="footer__menu__item">
-          <a href="index.html" class="footer__menu__link">Home</a>
+          <a href="/" class="footer__menu__link">Home</a>
         </li>
         <li class="footer__menu__item">
-          <a href="profile.html" class="footer__menu__link">Profile</a>
+          <a href="/profile" class="footer__menu__link">Profile</a>
         </li>
         <li class="footer__menu__item">
-          <a href="solutions.html" class="footer__menu__link">Solutions</a>
+          <a href="/solutions" class="footer__menu__link">Solutions</a>
         </li>
         <li class="footer__menu__item">
-          <a href="products.html" class="footer__menu__link">Products</a>
+          <a href="/products" class="footer__menu__link">Products</a>
         </li>
         <li class="footer__menu__item">
-          <a href="clients.html" class="footer__menu__link">Clients</a>
+          <a href="/clients" class="footer__menu__link">Clients</a>
         </li>
         <li class="footer__menu__item">
-          <a href="careers.html" class="footer__menu__link">Careers</a>
+          <a href="/careers" class="footer__menu__link">Careers</a>
         </li>
         <li class="footer__menu__item">
-          <a href="contacts.html" class="footer__menu__link">Contacts</a>
+          <a href="/contact-us" class="footer__menu__link">Contacts</a>
         </li>
       </ul>
       <ul class="footer__menu">
