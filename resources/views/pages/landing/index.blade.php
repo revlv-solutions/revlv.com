@@ -72,7 +72,7 @@
               <h1 class="slides__item__context__title">Innovator</h1>
             </div>
           </div>
-          <img class="for-slide" src="/img/slides/slide-2.jpg">
+          <img class="for-slide" src="/img/slide-2.jpg">
         </div>
         <div class="slides__item">
           <div class="slides__item__overlay">
@@ -81,7 +81,7 @@
               <h1 class="slides__item__context__title">Thinker</h1>
             </div>
           </div>
-          <img class="for-slide" src="/img/slides/slide-1.jpg">
+          <img class="for-slide" src="/img/slide-1.jpg">
         </div>
         <div class="slides__item">
           <div class="slides__item__overlay">
@@ -90,7 +90,7 @@
               <h1 class="slides__item__context__title">Artist</h1>
             </div>
           </div>
-          <img class="for-slide" src="/img/slides/slide-3.jpg">
+          <img class="for-slide" src="/img/slide-3.jpg">
         </div>
       </div>
     </div>
