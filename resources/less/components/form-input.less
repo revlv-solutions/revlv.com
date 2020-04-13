@@ -1,0 +1,58 @@
+/*
+form-input.less
+------------------------------------------------------------------------- */
+
+
+.input {
+    display: block;
+    width: 100%;
+    height: @input-height;
+    margin: 0;
+    padding: 0 15px;
+    font-family: @primary-font;
+    font-size: @base-font-size;
+    font-weight: 400;
+    color: @input-color-dark;
+    background: @input-background;
+    border: solid 1px @input-border;
+    border-radius: 0;
+    .placeholder(@input-placeholder);
+
+    // on click
+    &:focus {
+        border-color: #4698dd;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(70, 154, 221, 0.5);
+        outline: 0 none;
+    }
+
+    // disabled input style
+    &[disabled],
+    &[disabled=disabled] {
+        background: darken(@input-background, 15%);
+        border-color: darken(@input-background, 15%);
+        color: @input-color-light;
+        pointer-events: none;
+        user-select: none;
+        .placeholder(@input-color-light);
+    }
+
+    // input with border radius
+    &--round-corner {
+        border-radius: @border-radius;
+    }
+
+    // input error style
+    &--error {
+        background: lighten(@input-error, 37%);
+        border-color: lighten(@input-error, 15%);
+        color: lighten(@input-error, 5%);
+        .placeholder(lighten(@input-error, 5%));
+
+        &:focus {
+            background: @input-background;
+            border-color: #E15554;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(225, 85, 84, 0.5);
+            outline: 0 none;
+        }
+    }
+}

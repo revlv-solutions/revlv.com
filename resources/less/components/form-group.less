@@ -1,0 +1,146 @@
+/*
+form-group.less
+------------------------------------------------------------------------- */
+
+
+.form-group {
+    display: block;
+    margin: 0 0 16px 0;
+    padding: 0;
+
+    // if form group has error
+    &--error {
+
+        // change label color to red
+        .label {
+            color: @red;
+        }
+
+        // change help text color to red
+        .help-text {
+            color: lighten(@input-error, 5%);
+        }
+
+        // change input's focus to red
+        .input,
+        .select select,
+        .textarea {
+            &:focus {
+                background: @input-background;
+                border-color: #E15554;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(225, 85, 84, 0.5);
+                outline: 0 none;
+            }
+        }
+
+        // change input's style
+        .input {
+            background: lighten(@input-error, 37%);
+            border-color: lighten(@input-error, 15%);
+            color: lighten(@input-error, 5%);
+            .placeholder(lighten(@input-error, 5%));
+        }
+
+        // change input's icon style
+        .input-group__icon {
+            color: lighten(@input-error, 5%);
+        }
+
+        // change select's style
+        .select {
+            &:after {
+                color: lighten(@input-error, 5%);
+            }
+
+            select {
+                background: lighten(@input-error, 37%);
+                border-color: lighten(@input-error, 15%);
+                color: lighten(@input-error, 5%);
+                .placeholder(lighten(@input-error, 5%));
+            }
+        }
+
+        // change textarea's style
+        .textarea {
+            background: lighten(@input-error, 35%);
+            border-color: lighten(@input-error, 15%);
+            color: lighten(@input-error, 5%);
+            .placeholder(lighten(@input-error, 5%));
+        }
+
+        // change radio's style
+        .radio {
+            .radio__label {
+                color: lighten(@input-error, 5%);
+
+                &:before {
+                    background: lighten(@input-error, 35%);
+                    border: solid 1px lighten(@input-error, 15%);
+                    box-shadow: inset 0px 0px 0px 4px lighten(@input-error, 35%);
+                }
+            }
+
+            .radio__input:checked + .radio__label:before {
+                background: lighten(@input-error, 5%);
+            }
+        }
+
+        // change default checbox's style
+        .checkbox {
+            .checkbox__label {
+                color: lighten(@input-error, 5%);
+
+                &:before {
+                    background: lighten(@input-error, 35%);
+                    border: solid 1px lighten(@input-error, 15%);
+                    box-shadow: inset 0px 0px 0px 4px lighten(@input-error, 35%);
+                }
+            }
+        }
+
+        // change box fill type checkbox's style
+        .checkbox--box-fill {
+            .checkbox__label {
+                color: lighten(@input-error, 5%);
+
+                &:before {
+                    padding: 4px;
+                    background: lighten(@input-error, 35%);
+                    border: solid 1px lighten(@input-error, 15%);
+                    box-shadow: inset 0px 0px 0px 4px lighten(@input-error, 35%);
+                }
+            }
+
+            .checkbox__input:checked + .checkbox__label:before {
+                background: lighten(@input-error, 5%);
+                content: '';
+            }
+        }
+    }
+
+
+    // if form group is disabled
+    &--disabled {
+        // change input's style
+        .input {
+            background: darken(@input-background, 15%);
+            border-color: darken(@input-background, 15%);
+            color: @input-color-light;
+            pointer-events: none;
+            user-select: none;
+            .placeholder(@input-color-light);
+        }
+
+        // change input group icon's color
+        .input-group__icon {
+            color: @input-color-light;
+        }
+
+        // change select's arrow color
+        .select {
+            &:after {
+                color: @input-color-light;
+            }
+        }
+    }
+}

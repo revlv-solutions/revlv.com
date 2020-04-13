@@ -1,0 +1,33 @@
+/*
+alert.less
+------------------------------------------------------------------------- */
+
+
+.alert {
+  display: block;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 30px;
+  background: @green;
+
+  > * {
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    color: @white;
+  }
+
+  &--error {
+    background: @red;
+  }
+}

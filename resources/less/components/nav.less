@@ -1,0 +1,169 @@
+/*
+nav.less
+------------------------------------------------------------------------- */
+@nav-background: #2C3231;
+
+
+.nav {
+    &__button {
+        position: absolute;
+        z-index: 12;
+        top: 75px;
+        left: 75px;
+        width: 32px;
+        height: 24px;
+        transition-duration: 0.25s;
+        cursor: pointer;
+
+        &__icon {
+            transition-duration: 0.25s;
+            position: absolute;
+            height: 2px;
+            width: 32px;
+            top: 10px;
+            background-color: @white;
+
+            &:before{
+                transition-duration: 0.25s;
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background-color: @white;
+                content: "";
+                top: -10px;
+                left: 0;
+            }
+
+            &:after{
+                transition-duration: 0.25s;
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background-color: @white;
+                content: "";
+                top: 10px;
+                right: 0;
+            }
+        }
+
+        &:hover {
+            .nav__button__icon {
+                &:before,
+                &:after {
+                    width: 32px;
+                }
+            }
+        }
+
+        &.is-open {
+            position: fixed;
+
+            .nav__button__icon {
+                transition-duration: 0.25s;
+                transform: rotateZ(180deg);
+
+                &:before{
+                    width: 32px;
+                    transform: rotateZ(45deg) scaleX(0.60) translate(18px, -5px);
+                }
+
+                &:after{
+                    width: 32px;
+                    transform: rotateZ(-45deg) scaleX(0.60) translate(18px, 5px);
+                }
+            }
+        }
+    }
+
+
+
+    &__overlay {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        background: rgba(48,55,53,0);
+        .transition(all, .6s, cubic-bezier(0.23, 1, 0.32, 1));
+
+        &.is-open {
+            visibility: visible;
+            background: rgba(48,55,53,.97);
+
+            .nav__option {
+                .translateX(0);
+            }
+        }
+    }
+
+    &__option {
+        position: fixed;
+        display: flex;
+        align-items: flex-end;
+        z-index: 11;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 450px;
+        height: 100%;
+        .translateX(-450px);
+        .transition(all, .6s, cubic-bezier(0.23, 1, 0.32, 1));
+    }
+
+    &__list {
+        display: block;
+        width: 100%;
+        margin: 75px 0;
+        padding: 0;
+
+        &__item {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0 75px;
+            .transition(all, .4s, linear);
+
+            &:hover {
+                .nav__list__link {
+                    color: @white;
+
+                    &:before {
+                        visibility: visible;
+                        .opacity(1);
+                        .translateX(-20px);
+                    }
+                }
+            }
+        }
+
+        &__link {
+            display: block;
+            position: relative;
+            font-family: @primary-font;
+            font-size: @base-font-size + 20;
+            font-weight: 300;
+            line-height: 1;
+            padding: 10px 0;
+            color: @white;
+            user-select: none;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 2px;
+                width: 10px;
+                background: @white;
+                visibility: hidden;
+                .opacity(0);
+                .translateY(-50%);
+                .transition(all, .6s, cubic-bezier(0.23, 1, 0.32, 1));
+            }
+        }
+    }
+}

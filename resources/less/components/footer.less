@@ -1,0 +1,125 @@
+/*
+footer.less
+------------------------------------------------------------------------- */
+
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: @footer-background;
+
+    &__wrapper {
+        display: block;
+        width: @wrapper-width;
+        padding: 75px 30px;
+        margin: 0 auto;
+
+        &--full {
+            width: @container-width;
+            padding: 100px;
+        }
+    }
+
+    &__top,
+    &__bottom {
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__top {
+        justify-content: flex-end;
+    }
+
+    &__bottom {
+        margin-top: 75px;
+    }
+
+    &__contacts {
+        align-self: baseline;
+        flex-shrink: 0;
+        font-weight: 200;
+        color: @white;
+        width: 350px;
+        margin-right: auto;
+        padding: 0;
+
+        &__item {
+            list-style: none;
+            display: block;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,.5);
+
+            &__title {
+                display: block;
+                color: rgba(255,255,255,1);
+            }
+        }
+    }
+
+    &__menu {
+        flex-shrink: 0;
+        margin: 0 0 0 30px;
+        padding: 0;
+        width: 150px;
+
+        &__item {
+            display: block;
+            margin: 0;
+            padding: 5px 0;
+            list-style: none;
+        }
+
+        &__title {
+            display: block;
+            font-family: @primary-font;
+            font-size: @base-font-size - 4;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: @white;
+            margin-bottom: 20px;
+            .opacity(.35);
+        }
+
+        &__link {
+            position: relative;
+            font-family: @primary-font;
+            font-weight: 200;
+            color: @white;
+
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: @white;
+                .opacity(0);
+                .transition(all, .25s, ease-in-out);
+            }
+
+            &:hover {
+                color: @white;
+
+                &:after {
+                    .translateY(5px);
+                    .opacity(.25);
+                }
+            }
+
+        }
+    }
+
+    &__copyright {
+        display: block;
+        font-weight: 200;
+        color: @white;
+        margin: 0;
+        padding: 0;
+        .opacity(.5);
+    }
+}

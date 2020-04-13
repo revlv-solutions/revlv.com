@@ -1,0 +1,125 @@
+/*
+form-checkbox.less
+------------------------------------------------------------------------- */
+
+
+.checkbox {
+    display: inline-block;
+    margin: 0 16px 0 0;
+
+    // remove border/outline on focus
+    &:focus {
+        outline: none;
+    }
+
+    // radio/checkbox original label
+    &__label {
+        display: inline-block;
+        font-family: @primary-font;
+        font-size: @base-font-size;
+        font-weight: 400;
+        color: @font-color-light;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+
+        // substiture radio/checkbox
+        &:before {
+            display: inline-block;
+            content: '';
+            height: 18px;
+            width: 18px;
+            margin: 0 8px 0 0;
+            background: @input-background;
+            border: solid 1px @input-border;
+            vertical-align: top;
+        }
+    }
+
+    // visually hide the original radio/checkbox
+    &__input {
+        display: none;
+        visibility: hidden;
+        .opacity(0);
+    }
+
+    // add background if input is checked
+    &__input:checked + &__label:before {
+        // background: @input-border;
+        font-family: @tertiary-icon;
+            content: '\ea22';
+    }
+
+    // add border radius to checkbox
+    &--round-corner {
+        .checkbox__label {
+            &:before {
+                border-radius: @border-radius;
+            }
+        }
+    }
+
+    // alternative to check
+    &--box-fill {
+        .checkbox__label {
+            &:before {
+                padding: 4px;
+                box-shadow: inset 0px 0px 0px 4px @input-background;
+            }
+        }
+
+        .checkbox__input:checked + .checkbox__label:before {
+            background: @input-border;
+            content: '';
+        }
+    }
+
+    // box fill type error
+    &--box-fill-error {
+        .checkbox__label {
+            color: lighten(@input-error, 5%);
+
+            &:before {
+                padding: 4px;
+                background: lighten(@input-error, 35%);
+                border: solid 1px lighten(@input-error, 15%);
+                box-shadow: inset 0px 0px 0px 4px lighten(@input-error, 35%);
+            }
+        }
+
+        .checkbox__input:checked + .checkbox__label:before {
+            background: lighten(@input-error, 5%);
+            content: '';
+        }
+    }
+
+    // disabled checkbox
+    &--disabled {
+        .checkbox__label {
+            color: lighten(@font-color-light, 15%);
+            user-select: none;
+            pointer-events: none;
+            cursor: not-allowed;
+
+            &:before {
+                background: darken(@input-background, 15%);
+                border: solid 1px darken(@input-background, 15%);
+                box-shadow: inset 0px 0px 0px 4px darken(@input-background, 15%);
+            }
+        }
+    }
+
+    // error or required checkbox
+    &--error {
+        .checkbox__label {
+            color: lighten(@input-error, 5%);
+
+            &:before {
+                background: lighten(@input-error, 35%);
+                border: solid 1px lighten(@input-error, 15%);
+                box-shadow: inset 0px 0px 0px 4px lighten(@input-error, 35%);
+            }
+        }
+    }
+}

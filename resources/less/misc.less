@@ -1,0 +1,114 @@
+/*
+misc.less
+------------------------------------------------- */
+
+
+html * {
+    // for better font rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+    // prevent block's width deformation after using padding/border/etc
+    .box-sizing(border-box);
+}
+
+::selection {
+    // set selection text background to specific background
+    background: @selection-background;
+    // set selection text color to specific color
+    color: @selection-color;
+    // removes text shadow on content selection/highlight
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: @selection-background;
+    color: @selection-color;
+    text-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+textarea {
+    // set appearance to default
+    .appearance();
+    // enable only vertical resizing
+    resize: vertical;
+}
+
+input {
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        // set appearance to default
+        .appearance();
+    }
+}
+
+.container:after,
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    // 1
+    content: "";
+    // 2
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.browserupgrade {
+    margin: 24px 0;
+    background: @browserupgrade-background;
+    color: @browserupgrade-color;
+    padding: 24px 0;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}

@@ -1,0 +1,96 @@
+/*
+blogs.less
+------------------------------------------------------------------------- */
+
+
+.blogs {
+    display: block;
+    width: 100%;
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin-top: 50px;
+        padding: 30px;
+        width: 100%;
+        border: solid 1px darken(@primary-background, 10%);
+        .transition(all, .35s, ease-in-out);
+
+        &__title,
+        &__meta,
+        &__excerpt {
+            margin-bottom: 10px;
+            font-family: @primary-font;
+            font-size: @base-font-size;
+        }
+
+        &__thumbnail {
+            flex-shrink: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 140px;
+            width: 140px;
+
+            img {
+                display: block;
+                width: 100%;
+                vertical-align: bottom;
+            }
+        }
+
+        &__content {
+            flex-grow: 1;
+            margin-left: 25px;
+        }
+
+        &__title {
+            display: inline-block;
+            font-size: @base-font-size + 2;
+            font-weight: 500;
+            line-height: 1.4;
+            color: @font-color;
+
+            &:hover {
+                color: @font-color-light;
+            }
+        }
+
+        &__meta {
+            display: block;
+        }
+
+        &__publisher,
+        &__date {
+            font-size: @base-font-size - 4;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: @primary-color;
+
+            &:before {
+                content: '-';
+                margin-left: 3px;
+                margin-right: 7px;
+            }
+
+            &:first-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        &__excerpt {
+            display: block;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:hover {
+            border-color: darken(@primary-background, 30%);
+        }
+    }
+}

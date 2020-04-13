@@ -1,0 +1,133 @@
+/*
+form-select.less
+------------------------------------------------------------------------- */
+
+
+.select {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: @input-height;
+    margin: 0;
+    padding: 0;
+    background: @input-background;
+    border-radius: 0;
+
+    // add arrow down
+    &:after {
+        position: absolute;
+        content: "\e99d";
+        top: 50%;
+        right: 15px;
+        margin: 0;
+        padding: 0;
+        font-family: @tertiary-icon;
+        color: @input-color-dark;
+        background: none;
+        user-select: none;
+        pointer-events: none;
+        .translateY(-50%);
+    }
+
+    // display only texts on select box
+    select {
+        display: block;
+        width: 100%;
+        height: @input-height;
+        margin: 0;
+        padding: 0 15px;
+        font-family: @primary-font;
+        font-size: @base-font-size;
+        font-weight: 400;
+        color: @input-color-dark;
+        border: solid 1px @input-border;
+        background: transparent;
+        background-image: none;
+        box-shadow: none;
+        cursor: pointer;
+        .appearance();
+
+        optgroup,
+        option {
+            font-family: @primary-font;
+            font-size: @base-font-size;
+            font-weight: 400;
+            background: @input-background;
+            outline: solid 1px @input-border;
+            color: @input-color-dark;
+        }
+
+        // on click
+        &:focus {
+            border-color: #4698dd;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(70, 154, 221, 0.5);
+            outline: 0 none;
+        }
+
+        // disabled select style
+        &[disabled],
+        &[disabled=disabled] {
+            background: darken(@input-background, 15%);
+            border: none;
+            color: @input-color-light;
+            pointer-events: none;
+            user-select: none;
+            .placeholder(@input-color-light);
+        }
+    }
+
+    // disabled select box
+    &--disabled {
+        background: darken(@input-background, 15%);
+        border: solid 1px darken(@input-background, 15%);
+        color: @input-color-light;
+        pointer-events: none;
+        user-select: none;
+
+        // fallback
+        select {
+            background: darken(@input-background, 15%);
+            border: none;
+            color: @input-color-light;
+            cursor: not-allowed;
+            user-select: none;
+        }
+
+        &:after {
+            color: @input-color-light;
+        }
+    }
+
+    // select box with border radius
+    &--round-corner {
+        border-radius: @border-radius;
+
+        // fallback
+        select {
+            border-radius: @border-radius;
+        }
+    }
+
+    // select error style
+    &--error {
+        background: lighten(@input-error, 37%);
+
+        select {
+            background: lighten(@input-error, 37%);
+            border-color: lighten(@input-error, 15%);
+            color: lighten(@input-error, 5%);
+            .placeholder(lighten(@input-error, 5%));
+
+            &:focus {
+                background: @input-background;
+                border-color: #E15554;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(225, 85, 84, 0.5);
+                outline: 0 none;
+            }
+        }
+
+        &:after {
+            color: lighten(@input-error, 5%);
+        }
+    }
+}
