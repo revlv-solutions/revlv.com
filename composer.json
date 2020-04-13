@@ -1,19 +1,16 @@
 {
-    "name": "laravel/laravel",
+    "name": "revlv/revlv-site",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": [
-        "framework",
-        "laravel"
-    ],
-    "license": "MIT",
+    "description": "The REVLV Website.",
+    "license": "proprietary",
     "require": {
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "spatie/laravel-sitemap": "^5.7"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
