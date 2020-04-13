@@ -20,6 +20,12 @@ class StaticPagesTest extends TestCase
             ['clients'],
             ['careers'],
             ['contact-us'],
+            ['products'],
+            ['products/rsinet'],
+            ['products/sentry'],
+            ['products/tender'],
+            ['products/sentinel'],
+            ['products/fcovid'],
         ];
     }
 
