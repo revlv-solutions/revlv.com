@@ -662,4 +662,4 @@
   }
 
   $.fn[plugin].fx = {}
-})(this, jQuery)
+})(this, window.jQuery)

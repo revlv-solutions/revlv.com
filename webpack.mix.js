@@ -52,7 +52,6 @@ mix
   .less('resources/less/main.less', 'public/css/main.css')
   .js([
     'resources/js/app.js',
-    'resources/js/plugins/superslides/jquery.superslides.js',
     'resources/js/branding.js',
   ], 'public/js/app.js')
   .options({

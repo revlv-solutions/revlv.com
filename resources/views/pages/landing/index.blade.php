@@ -19,25 +19,25 @@
       <div class="nav__option">
         <ul class="nav__list">
           <li class="nav__list__item">
-            <a href="index.html" class="nav__list__link">Home</a>
+            <a href="/" class="nav__list__link">Home</a>
           </li>
           <li class="nav__list__item">
-            <a href="profile.html" class="nav__list__link">Profile</a>
+            <a href="/profile" class="nav__list__link">Profile</a>
           </li>
           <li class="nav__list__item">
-            <a href="solutions.html" class="nav__list__link">Solutions</a>
+            <a href="/solutions" class="nav__list__link">Solutions</a>
           </li>
           <li class="nav__list__item">
-            <a href="products.html" class="nav__list__link">Products</a>
+            <a href="/products" class="nav__list__link">Products</a>
           </li>
           <li class="nav__list__item">
-            <a href="clients.html" class="nav__list__link">Clients</a>
+            <a href="/clients" class="nav__list__link">Clients</a>
           </li>
           <li class="nav__list__item">
-            <a href="careers.html" class="nav__list__link">Careers</a>
+            <a href="/careers" class="nav__list__link">Careers</a>
           </li>
           <li class="nav__list__item">
-            <a href="contacts.html" class="nav__list__link">Contacts</a>
+            <a href="/contact-us" class="nav__list__link">Contacts</a>
           </li>
         </ul>
       </div>
@@ -223,4 +223,22 @@
     </div>
   </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+  $('.slides').superslides({
+    play: 5000,
+    animation: 'fade',
+    hashchange: false,
+    pagination: true,
+    scrollable: false,
+    elements: {
+      preserve: '.preserve',
+      nav: '.slides__navigation',
+      container: '.slides__container',
+      pagination: '.slides__pagination'
+    }
+  })
+</script>
 @endsection

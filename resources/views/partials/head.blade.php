@@ -11,6 +11,9 @@
     rel="stylesheet"
     href="{{ mix('css/all.css') }}"
     data-turbolinks-track="true">
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superslides/0.6.2/jquery.superslides.min.js"></script>
   <script defer src="{{ mix('js/app.js') }}" data-turbolinks-track="reload"></script>
   <!--
        ___           ___           ___           ___       ___
