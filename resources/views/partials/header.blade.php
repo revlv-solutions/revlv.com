@@ -1,5 +1,3 @@
-
-
 <div class="header header--inside">
   <div class="header__overlay">
     <div class="nav">

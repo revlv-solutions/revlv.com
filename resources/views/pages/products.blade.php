@@ -16,7 +16,7 @@
         <div class="products">
           <div class="products__item">
             <div class="products__image">
-              <img src="src/img/logo-default.png">
+              <img src="/img/logo-default.png">
             </div>
             <div class="products__details">
               <h4>RSINet ™</h4>
@@ -25,7 +25,7 @@
           </div>
           <div class="products__item">
             <div class="products__image">
-              <img src="src/img/logo-default.png">
+              <img src="/img/logo-default.png">
             </div>
             <div class="products__details">
               <h4>Sentry™ HRIS</h4>
@@ -34,7 +34,7 @@
           </div>
           <div class="products__item">
             <div class="products__image">
-              <img src="src/img/logo-default.png">
+              <img src="/img/logo-default.png">
             </div>
             <div class="products__details">
               <h4>Sentinel™ HRIS </h4>
@@ -43,7 +43,7 @@
           </div>
           <div class="products__item">
             <div class="products__image">
-              <img src="src/img/logo-default.png">
+              <img src="/img/logo-default.png">
             </div>
             <div class="products__details">
               <h4>Tender™ APPMIS System </h4>
@@ -52,7 +52,7 @@
           </div>
           <div class="products__item">
             <div class="products__image">
-              <img src="src/img/logo-default.png">
+              <img src="/img/logo-default.png">
             </div>
             <div class="products__details">
               <h4>Tender™ APP & APB System </h4>
@@ -61,7 +61,7 @@
           </div>
           <div class="products__item">
             <div class="products__image">
-              <img src="src/img/logo-default.png">
+              <img src="/img/logo-default.png">
             </div>
             <div class="products__details">
               <h4>FCovid™</h4>

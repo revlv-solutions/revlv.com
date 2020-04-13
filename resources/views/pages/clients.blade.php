@@ -9,7 +9,6 @@
       <div class="content__block__left">
         <div class="content__block__left__box">
           <h1>Remarkable Clients</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, voluptate</p>
         </div>
       </div>
       <div class="content__block__right">

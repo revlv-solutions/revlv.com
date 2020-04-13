@@ -22,7 +22,7 @@
             <span class="solutions__icon"><i class="nc-icon-outline design_copy"></i></span>
             <div class="solutions__details">
               <h4>Enterprise Software Solutions</h4>
-              <p>We have ready-to-use software solutions which might interest you or your organization, visit our <a href="/products.html">Products Page</a> for more details</p>
+              <p>We have ready-to-use software solutions which might interest you or your organization, visit our <a href="/products">Products Page</a> for more details</p>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
             </span>
             <div class="solutions__details">
               <h4>Managed IT Services</h4>
-              <p>We can complement your connectivity with Satellite Connection to cover areas not yet reliably served by fiber connection</p>
+              <p>We can manage your entire IT infrastructure and systems so you can focus on your core business at a minimal cost, a choice that many of our clients has already made.</p>
             </div>
           </div>
           <div class="solutions__item">

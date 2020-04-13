@@ -44,16 +44,19 @@
           <span class="footer__menu__title">Products</span>
         </li>
         <li class="footer__menu__item">
-          <a href="sentry.html" class="footer__menu__link">Sentry</a>
+          <a href="/rsinet" target="_blank" class="footer__menu__link">RSInet™</a>
         </li>
         <li class="footer__menu__item">
-          <a href="sentinel.html" class="footer__menu__link">Sentinel</a>
+          <a href="/sentry" target="_blank" class="footer__menu__link">Sentry™</a>
         </li>
         <li class="footer__menu__item">
-          <a href="appmis.html" class="footer__menu__link">APPMIS</a>
+          <a href="/sentinel" target="_blank" class="footer__menu__link">Sentinel™</a>
         </li>
         <li class="footer__menu__item">
-          <a href="app-apb.html" class="footer__menu__link">APP & APB</a>
+          <a href="/tender" target="_blank" class="footer__menu__link">Tender™</a>
+        </li>
+        <li class="footer__menu__item">
+          <a href="https://fcovid.ph/" target="_blank" class="footer__menu__link">FCovid™</a>
         </li>
       </ul>
       <ul class="footer__menu">
