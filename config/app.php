@@ -167,6 +167,7 @@ return [
          */
         Laboratory\Scribe\ScribeServiceProvider::class,
         Laboratory\Selection\SelectionServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         /*
          * Application Service Providers...

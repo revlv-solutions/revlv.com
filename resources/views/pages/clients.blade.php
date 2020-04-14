@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', ' — Clients')
 
 @section('content')
 <div class="content">
