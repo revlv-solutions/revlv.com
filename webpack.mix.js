@@ -67,3 +67,7 @@ mix
     'resources/fonts/nucleo-webfonts/outline/nucleo-outline.css',
     'public/css/main.css'
   ], 'public/css/all.css')
+
+if (mix.inProduction()) {
+  mix.version()
+}
