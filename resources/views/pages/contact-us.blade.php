@@ -29,7 +29,7 @@ grecaptcha.ready(function() {
             <p>Unit 26N Burgundy Corporate Tower, 252 Sen. Gil Puyat Avenue, Makati City</p>
             <p>Mobile: +63 917-731-8821</p>
             <p>Phone: +632 8831-3568</p>
-            <p>Email: info@revlv.com / sales@revlv.com</p>
+            <p>Email: {!! email_obfuscate('info@revlv.com') !!} / {!! email_obfuscate('sales@revlv.com') !!}</p>
           </div>
         </div>
         <div class="content__panel">

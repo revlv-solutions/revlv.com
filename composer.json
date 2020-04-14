@@ -12,6 +12,7 @@
     }],
     "require": {
         "php": "^7.2.5",
+        "artesaos/seotools": "^0.17.2",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "google/recaptcha": "^1.2",
@@ -42,6 +43,7 @@
         }
     },
     "autoload": {
+        "files": ["modules/Support/helpers.php"],
         "psr-4": {
             "Revlv\\": "app/"
         },

@@ -84,7 +84,7 @@
         </div>
         <div class="content__panel">
           <h4>HOW CAN YOU REQUEST TO ACCESS, CHANGE, DELETE, RESTRICT THE USE OR OBJECT TO THE PROCESSING OF YOUR PERSONAL DATA</h4>
-          <p>If you would like to request to access, change, delete, restrict the use or object to the processing of your Personal Data that you have previously provided to us, or if you would like to receive an electronic copy of your Personal Data for purposes of transmitting it to another company, please complete access form. If you have any questions about the form or our process, feel free to email us at <a href="">dpo@revlv.com</a> </p>
+          <p>If you would like to request to access, change, delete, restrict the use or object to the processing of your Personal Data that you have previously provided to us, or if you would like to receive an electronic copy of your Personal Data for purposes of transmitting it to another company, please complete access form. If you have any questions about the form or our process, feel free to email us at <a href="{!! email_obfuscate('dpo@revlv.com', true) !!}">{!! email_obfuscate('dpo@revlv.com') !!}</a> </p>
           <p>For your protection, we may need to verify your identity before fulfilling your request. We will try to comply with your request as soon as reasonably practicable and consistent with applicable law.</p>
           <p>Please note that we often need to retain certain data for recordkeeping purposes and/or to complete any transactions that you began prior to requesting a change or deletion (e.g., when you make a purchase or reservation, or enter a promotion, you may not be able to change or delete the Personal Data provided until after the completion of such purchase, reservation, or promotion). There may also be residual data that will remain within our databases and other records, which will not be removed. In addition, there may be certain data that we may not allow you to review for legal, security, or other reasons</p>
         </div>
@@ -113,7 +113,7 @@
         <div class="content__panel">
           <h4>CONTACTING US </h4>
           <p>If you have any questions about this Privacy Statement, please contact us by email.</p>
-          <p>Data Privacy Officer<br>Revlv Solutions, Inc<br>26N Burgundy Corporate Tower<br>252 Senator Gil Puyat Avenue, Makati City<br>Email us at <a href="">dpo@revlv.com</a></p>
+          <p>Data Privacy Officer<br>Revlv Solutions, Inc<br>26N Burgundy Corporate Tower<br>252 Senator Gil Puyat Avenue, Makati City<br>Email us at <a href="{!! email_obfuscate('dpo@revlv.com', true) !!}">{!! email_obfuscate('dpo@revlv.com') !!}</a></p>
         </div>
       </div>
     </div>
