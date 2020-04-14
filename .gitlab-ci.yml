@@ -3,6 +3,7 @@ stages:
   - building
   - testing
   - security
+  - deploy
 
 image: rdpascua/ci-pipeline-php
 
@@ -110,3 +111,13 @@ sensiolabs:
   cache:
     paths:
       - security-checker/
+
+deploy_live:
+  stage: deploy
+  environment:
+    name: live
+    url: revlv.com
+  script:
+    - ssh revlv@revlv.com "cd /home/revlv/revlv.com && git pull origin master && ./compile.sh"
+  only:
+    - master
