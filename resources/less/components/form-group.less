@@ -5,8 +5,28 @@ form-group.less
 
 .form-group {
     display: block;
-    margin: 0 0 16px 0;
+    margin: 0 0 20px 0;
     padding: 0;
+
+    &--required {
+      .label {
+        display: inline-flex;
+        width: auto;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 100%;
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: @red;
+          margin-left: 5px;
+        }
+      }
+    }
 
     // if form group has error
     &--error {
@@ -142,5 +162,15 @@ form-group.less
                 color: @input-color-light;
             }
         }
+    }
+
+    &--recaptcha {
+      margin-bottom: 40px;
+
+      p {
+        font-size: @base-font-size - 2;
+        margin: 0;
+        color: @font-color-light;
+      }
     }
 }

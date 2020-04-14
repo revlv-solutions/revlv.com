@@ -50,6 +50,12 @@
             {{ Scribe::sel('inquiry', 'Inquiry', 'InquiryTypes', 'Select Inquiry', true) }}
             {{ Scribe::txtarea('message', 'Message', true) }}
 
+            <div class="form-group form-group--recaptcha">
+              <p>This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+              <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+            </div>
+
             <div class="form-group">
               <button
                 type="submit"
