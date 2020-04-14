@@ -17,6 +17,7 @@ deploy_live:
     - mkdir -p ~/.ssh
     - echo -e "$DEPLOY_KEY" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
+    - cat ~/.ssh/id_rsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
     - ssh revlv@revlv.com "cd /home/revlv/revlv.com && git pull origin master && ./compile.sh"
