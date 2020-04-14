@@ -1,7 +1,29 @@
 @extends('layouts.branding')
 
-@section('content')
+@push('scripts')
+<script>
+  $(document).on('turbolinks:load', function () {
+    setTimeout(function() {
+      $('.slides').superslides({
+        play: 5000,
+        animation: 'fade',
+        hashchange: false,
+        pagination: true,
+        scrollable: false,
+        elements: {
+          preserve: '.preserve',
+          nav: '.slides__navigation',
+          container: '.slides__container',
+          pagination: '.slides__pagination'
+        }
+      })
+    }, 200)
+  })
+</script>
+@endpush
 
+
+@section('content')
   <div class="header">
 
     <div id="deco" class="header__deco">
@@ -133,22 +155,4 @@
   </div>
 
   @include('partials.footer')
-@endsection
-
-@section('scripts')
-<script>
-  $('.slides').superslides({
-    play: 5000,
-    animation: 'fade',
-    hashchange: false,
-    pagination: true,
-    scrollable: false,
-    elements: {
-      preserve: '.preserve',
-      nav: '.slides__navigation',
-      container: '.slides__container',
-      pagination: '.slides__pagination'
-    }
-  })
-</script>
 @endsection
