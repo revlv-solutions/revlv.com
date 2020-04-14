@@ -36,3 +36,7 @@
 ## Running CS Fixer
 
     composer csfix
+
+## Site Keys
+
+The site key in the `.env.example` are for testing case only, this is not the actual key for live environment
