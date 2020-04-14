@@ -17,8 +17,7 @@ deploy_live:
     - echo "$DEPLOY_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo "$REVLV_PUBLIC_KEY" >> ~/.ssh/known_hosts
-    - chmod 644 ~/.ssh/known_hosts
+    - cat ~/.ssh/id_rsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
     - ssh revlv@revlv.com "cd /home/revlv/revlv.com && git pull origin master && ./compile.sh"
