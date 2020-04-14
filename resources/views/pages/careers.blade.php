@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
 <div class="content">
   <div class="content__wrapper">
     <div class="careers__blank">
@@ -12,5 +11,4 @@
     </div>
   </div>
 </div>
-
 @endsection

@@ -79,6 +79,24 @@ unit-testing:
     expire_in: 1 days
     when: on_failure
 
+e2e-testing:
+  stage: testing
+  dependencies:
+    - composer
+    - yarn
+    - build-assets
+  script:
+    - npm run lint
+    - php artisan dusk:chrome-driver 80
+    - php artisan serve &
+    - php artisan dusk
+  artifacts:
+    paths:
+      - ./tests/Browser/screenshots/**
+      - ./tests/Browser/console/**
+    expire_in: 1 days
+    when: on_failure
+
 codestyle:
   stage: testing
   script:

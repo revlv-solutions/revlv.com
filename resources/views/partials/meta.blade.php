@@ -15,6 +15,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/superslides/0.6.2/jquery.superslides.min.js"></script>
   <script defer src="{{ mix('js/app.js') }}" data-turbolinks-track="reload"></script>
+  @stack('scripts')
   <!--
        ___           ___           ___           ___       ___
       /\  \         /\  \         /\__\         /\__\     /\__\

@@ -1,8 +1,19 @@
 @extends('layouts.main')
 
+@push('scripts')
+<script src="https://www.google.com/recaptcha/api.js?render=GOOGLE_SITE_KEY"></script>
+<script>
+grecaptcha.ready(function() {
+  grecaptcha.execute('GOOGLE_SITE_KEY', { action: 'contact_us' }).then(function(token) {
+    if (token) {
+      document.getElementById('recaptcha').value = token
+    }
+  })
+})
+</script>
+@endpush
+
 @section('content')
-
-
 <div class="content">
   <div class="content__wrapper">
     <div class="content__block">
@@ -39,10 +50,23 @@
       </div>
       <div class="content__block__right">
         <div class="content__panel">
-          {{ Form::open() }}
-            <div class="alert">
-              <p>Dicta minima, quos, consequatur eligendi accusantium</p>
+          {{ Form::open(['route' => 'contact.submit', 'id' => 'inquiry-form']) }}
+            @if($errors->count() && !$errors->has('captcha'))
+            <div class="alert alert--error">
+              <p>{{ trans('responses.inquiry_validation_error') }}</p>
             </div>
+            @endif
+
+            @if ($errors->has('captcha'))
+            <div class="alert alert--error">
+              <p>{{ $errors->first('captcha') }}</p>
+            </div>
+            @endif
+
+            @if(session()->has('notification'))
+            <div class="alert"><p>{{ session()->get('notification') }}</p></div>
+            @endif
+            <input type="hidden" name="recaptcha" id="recaptcha">
             {{ Scribe::txt('name', 'Full Name', true) }}
             {{ Scribe::txt('company', 'Company', true) }}
             {{ Scribe::txt('email', 'Email', true) }}
@@ -52,12 +76,13 @@
 
             <div class="form-group form-group--recaptcha">
               <p>This site is protected by reCAPTCHA and the Google
-              <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-              <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+              <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a> and
+              <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
             </div>
 
             <div class="form-group">
               <button
+                id="submit-inquiry"
                 type="submit"
                 class="button">Submit Inquiry</button>
             </div>
@@ -68,3 +93,4 @@
   </div>
 </div>
 @endsection
+
