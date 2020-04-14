@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', ' — Contact Us')
 
 @push('scripts')
 <script src="https://www.google.com/recaptcha/api.js?render=GOOGLE_SITE_KEY"></script>

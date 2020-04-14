@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', ' — Privacy Policy')
 
 @section('content')
 <div class="content">

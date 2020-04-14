@@ -1,8 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Revlv Solutions, Inc.</title>
-  <meta name="description" content="">
+  <title>Revlv Solutions, Inc @yield('title')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {!! SEO::generate() !!}
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
