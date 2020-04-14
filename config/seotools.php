@@ -11,7 +11,7 @@ return [
         'defaults'       => [
             'title'        => "Revlv Solutions, Inc", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'For those who helped create the Genki Dama', // set false to total remove
+            'description'  => 'REVLV provides innovative, customized IT solutions. Sepcializing in software, network & computing, security, and engineering. We take our clients to the future - now.', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => ['developer', 'integrator', 'engineering'],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
@@ -37,7 +37,7 @@ return [
          */
         'defaults' => [
             'title'       => 'Revlv Solutions, Inc', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
+            'description' => 'REVLV provides innovative, customized IT solutions. Sepcializing in software, network & computing, security, and engineering. We take our clients to the future - now.', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'website',
             'site_name'   => false,
@@ -61,7 +61,7 @@ return [
          */
         'defaults' => [
             'title'       => 'Revlv Solutions, Inc', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
+            'description' => 'REVLV provides innovative, customized IT solutions. Sepcializing in software, network & computing, security, and engineering. We take our clients to the future - now.', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],
