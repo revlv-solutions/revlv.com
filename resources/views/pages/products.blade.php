@@ -64,7 +64,7 @@
             </div>
             <div class="products__details">
               <h4>FCovid™</h4>
-              <p>FCovid™ is our Health risk mitigation online and mobile application currently designed to monitor individual susceptibility risk to SARS Covid-19. Its features include estimating an individual’s susceptibility based on his or her age, travel history, experienced symptoms and comorbidities among others. Institutions can use this to manage the risk of Covid-19 risk of infection among its employees.</p>
+              <p>FCovid™ is our Health risk mitigation online and mobile application currently designed to monitor individual susceptibility risk to SARS-CoV-2 (COVID-19). Its features include estimating an individual’s susceptibility based on his or her age, travel history, experienced symptoms and comorbidities among others. Institutions can use this to manage the risk of SARS-CoV-2 (COVID-19) risk of infection among its employees.</p>
             </div>
           </div>
         </div>

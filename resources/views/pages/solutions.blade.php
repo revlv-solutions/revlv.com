@@ -70,7 +70,7 @@
             </span>
             <div class="solutions__details">
               <h4>Network Management Services</h4>
-              <p>Apart from setting up your network, you can also leave to us your network management with a assurance of prompt response, latest approach to data privacy, protection and security at lower cost as opposed to an in-house hire.</p>
+              <p>Apart from setting up your network, you can also leave to us your network management with an assurance of prompt response, latest approach to data privacy, protection and security at lower cost as opposed to an in-house hire.</p>
             </div>
           </div>
           <div class="solutions__item">
@@ -79,7 +79,7 @@
             </span>
             <div class="solutions__details">
               <h4>Cybersecurity Services</h4>
-              <p>Apart from setting up your network, you can also leave to us your network management with a assurance of prompt response, latest approach to data privacy, protection and security at lower cost as opposed to an in-house hire.</p>
+              <p>As the malware, viruses and other security threats get more and more sophisticated, your Cybersecurity infrastructure and incident response should always be at least one step ahead. Work with us and we'll help you sleep better.</p>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
             </span>
             <div class="solutions__details">
               <h4>Fiber Optic Network & Structured Cabling</h4>
-              <p>We have a dedicated team with a long experience whether upgrade from copper to fiber network, to upgrade of Fiber to GPON capable network from a simple one-office room project, to laying out the fiber optic capability of an ongoing construction of a skyscraper.</p>
+              <p>Our dedicated team of copper and fiber engineers, equipped with the right tools can transform your ageing network to gigabit speed fiber optic network. From the design phase until the last fiber core is spliced and tested, you can count on our team.</p>
             </div>
           </div>
           <div class="solutions__item">
