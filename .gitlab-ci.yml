@@ -1,10 +1,116 @@
 stages:
+  - preparation
+  - building
+  - testing
+  - security
   - deploy
 
 image: rdpascua/ci-pipeline-php
 
 cache:
   key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+
+composer:
+  stage: preparation
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - php -v
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+    - cp .env.example .env
+    - php artisan key:generate
+  artifacts:
+    paths:
+      - vendor/
+      - .env
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - vendor/
+
+yarn:
+  stage: preparation
+  script:
+    - yarn --version
+    - yarn install --pure-lockfile
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - node_modules/
+
+build-assets:
+  stage: building
+  dependencies:
+    - composer
+    - yarn
+  script:
+    - yarn --version
+    - yarn prod --progress false
+  artifacts:
+    paths:
+      - public/css/
+      - public/js/
+      - public/img/
+      - public/video/
+      - public/fonts/
+      - public/mix-manifest.json
+    expire_in: 1 days
+    when: always
+
+unit-testing:
+  stage: testing
+  dependencies:
+    - composer
+    - build-assets
+  script:
+    - php artisan test
+  artifacts:
+    paths:
+      - ./storage/logs
+    expire_in: 1 days
+    when: on_failure
+
+codestyle:
+  stage: testing
+  script:
+    - curl -L https://cs.symfony.com/download/php-cs-fixer-v2.phar -o php-cs-fixer.phar
+    - php php-cs-fixer.phar fix ./app --dry-run --stop-on-violation --using-cache=no
+    - php php-cs-fixer.phar fix ./tests --dry-run --stop-on-violation --using-cache=no
+  dependencies: []
+  cache:
+    paths:
+      - php-cs-fixer.phar
+
+phpcpd:
+  stage: testing
+  script:
+    - test -f phpcpd.phar || curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar
+    - php phpcpd.phar app/ --min-lines=50
+  dependencies: []
+  cache:
+    paths:
+      - phpcpd.phar
+
+sensiolabs:
+  stage: security
+  script:
+    - test -d security-checker || git clone https://github.com/sensiolabs/security-checker.git
+    - cd security-checker
+    - composer install
+    - php security-checker security:check ../composer.lock
+  dependencies: []
+  cache:
+    paths:
+      - security-checker/
 
 deploy_live:
   stage: deploy
