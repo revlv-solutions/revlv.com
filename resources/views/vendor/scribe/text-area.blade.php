@@ -2,7 +2,7 @@
   <label for="{{$name}}" class="label">{{ $label }}</label>
   @php
    $options = [
-      'class' => 'input u-border-radius u-text-upper',
+      'class' => 'textarea u-border-radius u-text-upper',
       'id' => $name,
       'data-vv-as' => strtolower($label),
       'placeholder' => '&mdash;'
