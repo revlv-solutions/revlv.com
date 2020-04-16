@@ -4,59 +4,64 @@ scrollup.less
 
 
 .scrollup {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  bottom: 50px;
+  right: 50px;
+  width: 32px;
+  height: 32px;
+  .border-radius(50%);
+  background: rgba(48,55,53,.35);
+  color: @white;
+  cursor: pointer;
+  mix-blend-mode: luminosity;
+  visibility: hidden;
+  .opacity(0);
+  .transition(background, .25s, ease-in-out);
+
+  @media screen and (min-width: @screen-m) {
     bottom: 75px;
     right: 75px;
-    width: 32px;
-    height: 32px;
-    .border-radius(50%);
-    background: rgba(48,55,53,.35);
-    color: @white;
-    cursor: pointer;
-    mix-blend-mode: luminosity;
-    visibility: hidden;
-    .opacity(0);
-    .transition(background, .25s, ease-in-out);
+  }
 
-    &.is-visible {
-        visibility: visible;
-        .opacity(1);
+  &.is-visible {
+    visibility: visible;
+    .opacity(1);
+  }
+
+  i {
+    position: relative;
+    font-family: @tertiary-icon;
+    .transition(all, .25s, ease-in-out);
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      height: 2px;
+      width: 2px;
+      background: @white;
+      .opacity(0);
+      .translate(-50% 0);
+      .transition(all, .25s, ease-in-out);
     }
+  }
+
+  &:hover {
+    background: rgba(48,55,53,.75);
 
     i {
-        position: relative;
-        font-family: @tertiary-icon;
-        .transition(all, .25s, ease-in-out);
+      .translateY(-3px);
 
-        &:after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            height: 2px;
-            width: 2px;
-            background: @white;
-            .opacity(0);
-            .translate(-50% 0);
-            .transition(all, .25s, ease-in-out);
-        }
+      &:after {
+        height: 10px;
+        .opacity(1);
+        .translate(-50% -4px);
+      }
     }
-
-    &:hover {
-        background: rgba(48,55,53,.75);
-
-        i {
-            .translateY(-3px);
-
-            &:after {
-                height: 10px;
-                .opacity(1);
-                .translate(-50% -4px);
-            }
-        }
-    }
+  }
 }
