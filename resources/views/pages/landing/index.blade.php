@@ -22,10 +22,9 @@
 </script>
 @endpush
 
-
 @section('content')
-  <div class="header">
 
+  <div class="header">
     <div id="deco" class="header__deco">
       <div id="deco-circle-1" class="header__deco__circle"></div>
       <div id="deco-circle-2" class="header__deco__circle header__deco__circle--b"></div>

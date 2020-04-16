@@ -5,13 +5,18 @@ content.less
 
 .content {
     display: block;
-    padding: 75px 30px;
+    padding: 50px 0;
     background: @primary-background;
+
+    @media screen and (min-width: @screen-m) {
+      padding: 75px 0;
+    }
 
     &__wrapper {
         display: block;
         position: relative;
-        width: @wrapper-width;
+        width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 30px;
 
@@ -40,8 +45,14 @@ content.less
 
     &__block {
         display: flex;
-        flex-direction: row;
-        margin-top: 75px;
+        width: 100%;
+        flex-flow: column nowrap;
+        margin-top: 40px;
+
+        @media screen and (min-width: @screen-m) {
+          flex-flow: row nowrap;
+          margin-top: 75px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -52,8 +63,18 @@ content.less
             flex-flow: column nowrap;
             position: relative;
             flex-shrink: 0;
-            width: 300px;
-            margin-right: 75px;
+            width: 100%;
+            margin-bottom: 40px;
+
+            @media screen and (min-width: @screen-m) {
+              margin-bottom: 0;
+              margin-right: 30px;
+              width: 300px;
+            }
+
+            @media screen and (min-width: @screen-l) {
+              margin-right: 75px;
+            }
 
             &__box {
               position: sticky;
