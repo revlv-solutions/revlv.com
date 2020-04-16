@@ -16,10 +16,37 @@ clients.less
         align-items: center;
         justify-content: center;
         padding: 30px;
-        margin-right: 50px;
-        margin-top: 0;
-        .calc(width, ~'(100%  - 50px) / 2');
+        margin-right: 0;
+        margin-top: 30px;
+        width: 100%;
         border: solid 1px darken(@primary-background, 10%);
+
+        @media screen and (min-width: @screen-s) {
+          margin-top: 0;
+          margin-right: 30px;
+          .calc(width, ~'(100%  - 30px) / 2');
+
+          &:nth-child(2n) {
+              margin-right: 0;
+          }
+
+          &:nth-child(n+3) {
+              margin-top: 30px;
+          }
+        }
+
+        @media screen and (min-width: @screen-m) {
+          margin-right: 50px;
+          .calc(width, ~'(100%  - 50px) / 2');
+
+          &:nth-child(2n) {
+              margin-right: 0;
+          }
+
+          &:nth-child(n+3) {
+              margin-top: 50px;
+          }
+        }
 
         > * {
           display: inline-flex;
@@ -64,12 +91,8 @@ clients.less
             color: @font-color;
         }
 
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
-
-        &:nth-child(n+3) {
-            margin-top: 50px;
+        &:first-child {
+          margin-top: 0;
         }
     }
 }
