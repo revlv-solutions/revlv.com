@@ -72,9 +72,14 @@ header.less
         }
 
         &__text {
+            display: none;
             font-size: @base-font-size;
             font-weight: 400;
             margin-right: 10px;
+
+            @media screen and (min-width: @screen-l) {
+              display: block;
+            }
         }
 
         &__icon {
