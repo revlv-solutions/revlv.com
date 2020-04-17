@@ -55,7 +55,7 @@
             </div>
             <div class="products__details">
               <h4>Tender™ APP & APB System </h4>
-              <p>Tender™ APPMIS System is our software system for creating the annual procurement plan (APP) and annual procurement budget (APB), that is legally mandated to be prepared annually in all government agencies. </p>
+              <p>Tender™ APP & APB System is our software system for creating the annual procurement plan (APP) and annual procurement budget (APB), that is legally mandated to be prepared annually in all government agencies. </p>
             </div>
           </div>
           <div class="products__item">
