@@ -27,5 +27,14 @@
       @yield('content')
     </div>
     @yield('scripts')
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75257522-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-75257522-1');
+    </script>
   </body>
 </html>
